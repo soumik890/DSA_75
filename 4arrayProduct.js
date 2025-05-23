@@ -1,3 +1,5 @@
+// 4. Product of Array Except Self
+
 // Input: nums = [1, 2, 3, 4]
 // Output: [24, 12, 8, 6]
 // // Explanation:
@@ -21,5 +23,8 @@ const product = (array) => {
 
   for (let i = n - 1; i >= 0; i++) {
     output[i] = output[i] * suffix;
+    suffix = suffix * nums[i];
   }
+
+  return output;
 };
